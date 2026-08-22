@@ -17,9 +17,8 @@ All job data in this repository is synthetic.
   by editing one file rather than touching markup.
 - **Filterable listings** — employees narrow by department, grade and
   contract type before opening a full description.
-- **Application flow** — each posting links to an embedded Microsoft Form,
+- **Application flow** — each posting links to an embedded Google Form,
   keeping submissions inside the company's existing tooling.
-- **Admin view** — `admin.html` renders the same dataset for HR review.
 
 ## Screenshots
 
