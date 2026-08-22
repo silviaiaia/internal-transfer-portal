@@ -1,21 +1,48 @@
-https://silviaiaia.github.io/internal-transfer_website/
+# Internal Transfer Portal
 
-This is a prototype for an internal web portal designed to display available job openings for employees interested in internal transfers.
+**[→ Live demo](https://silviaiaia.github.io/internal-transfer_website/)**
 
-## **Important Notice**
+A bilingual job board for employees looking to transfer between internal
+departments. Built during an internship at a mid-sized electronics
+manufacturer to replace an email-and-spreadsheet process for circulating
+internal openings.
 
-**This project is for internal use only and is not intended for external or public access.**
+All job data in this repository is synthetic.
 
-This website is a proof of concept. The content within this web page, including job descriptions and other related information, is for demonstration purposes only and is entirely fictional.
+## What it does
 
-## Project Purpose
+- **Bilingual by default** — every posting carries parallel EN / ZH fields;
+  the language toggle swaps the entire UI without a page reload.
+- **Content-driven** — postings live in `jobs.json`, so HR updates openings
+  by editing one file rather than touching markup.
+- **Filterable listings** — employees narrow by department, grade and
+  contract type before opening a full description.
+- **Application flow** — each posting links to an embedded Microsoft Form,
+  keeping submissions inside the company's existing tooling.
+- **Admin view** — `admin.html` renders the same dataset for HR review.
 
-* **Internal Use Only:** This portal serves as a proof of concept to test the functionality and user interface for a potential internal HR application.
-* **Demonstration:** The site is a demonstration of how a static web page can be used to present job information in a clean, organized, and user-friendly manner.
-* **No External Distribution:** This code and its content should not be shared, distributed, or published outside of the company.
+## Screenshots
 
-## Technical Details
+<p align="center">
+  <img src="docs/screenshots/listings.png" width="600" alt="Job listings">
+</p>
 
-* **Static HTML, CSS, and JavaScript:** The portal is built using standard web technologies.
-* **Multilingual Support:** It features a simple language-switching function for English and Traditional Chinese.
-* **Microsoft Forms Integration:** It includes an embedded Microsoft Forms to handle job applications.
+## Running locally
+
+```bash
+git clone https://github.com/silviaiaia/internal-transfer_website.git
+cd internal-transfer_website
+python3 -m http.server 8000
+```
+
+Then open <http://localhost:8000>. A static server is needed because
+`jobs.json` is loaded with `fetch()` — opening `index.html` directly from
+the filesystem will fail on CORS.
+
+## Built with
+
+Vanilla HTML, CSS and JavaScript. No framework, no build step.
+
+## License
+
+[MIT](LICENSE).
