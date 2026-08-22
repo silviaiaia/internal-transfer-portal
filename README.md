@@ -11,14 +11,10 @@ All job data in this repository is synthetic.
 
 ## What it does
 
-- **Bilingual by default** — every posting carries parallel EN / ZH fields;
-  the language toggle swaps the entire UI without a page reload.
-- **Content-driven** — postings live in `jobs.json`, so HR updates openings
-  by editing one file rather than touching markup.
-- **Filterable listings** — employees narrow by department, grade and
-  contract type before opening a full description.
-- **Application flow** — each posting links to an embedded Google Form,
-  keeping submissions inside the company's existing tooling.
+- **Bilingual by default** — every posting carries parallel EN / ZH fields; the language toggle swaps the entire UI without a page reload.
+- **Data-driven rendering** — job postings are fetched at runtime and rendered client-side, so the listing layout is decoupled from the content. In production the portal reads from the company's internal HR system; this demo swaps in a static `jobs.json` with synthetic postings so the repository runs standalone.
+- **Filterable listings** — employees narrow by department, grade and contract type before opening a full description.
+- **Application flow** — postings link through to an embedded application form; in the production version this was a Microsoft Form tied to the company's Microsoft 365 tenant.
 
 ## Screenshots
 
