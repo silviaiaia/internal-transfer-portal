@@ -1,6 +1,6 @@
 # Internal Transfer Portal
 
-**[→ Live demo](https://silviaiaia.github.io/internal-transfer_website/)**
+**[→ Live demo](https://silviaiaia.github.io/internal-transfer-portal/)**
 
 A bilingual job board for employees looking to transfer between internal
 departments. Built during an internship at a mid-sized electronics
@@ -30,8 +30,8 @@ All job data in this repository is synthetic.
 ## Running locally
 
 ```bash
-git clone https://github.com/silviaiaia/internal-transfer_website.git
-cd internal-transfer_website
+git clone https://github.com/silviaiaia/internal-transfer-portal.git
+cd internal-transfer-portal
 python3 -m http.server 8000
 ```
 
